@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Header from '../../Components/header';
+import Icon from '../../Components/svg-loader';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -34,7 +35,6 @@ class Login extends Component {
         } else {
             this.setState({ formInvalid: true })
         }
-        console.log(this.state);
     }
     setActiveElement(value){
       console.log(value);
@@ -48,7 +48,7 @@ class Login extends Component {
                     {this.renderRedirect()}
                     <div className="row login-form">
                         <div className="col-md-4 col-sm-4">
-
+                        
                         </div>
                         <div className="col-4 my-auto form-section">
                             <form>
@@ -60,10 +60,6 @@ class Login extends Component {
                                         <p>Register</p>
                                     </div>
                                 </div>
-
-                                {/* <div className="text-center col-6">
-                                    <h3>Login</h3>
-                                </div> */}
                                 <div className="form-group">
                                     <label htmlFor="username">Username</label>
                                     <input type="text" value={this.state.username} onChange={this.handleChange} name="username" className="form-control" placeholder="Enter email" />
