@@ -29,7 +29,7 @@ class Login extends Component {
     }
     onSubmit = e => {
         e.preventDefault();
-        if (this.state.username === 'jayanth' && this.state.password === '1234') {
+        if (this.state.username === 'chenna' && this.state.password === '1234') {
             localStorage.setItem('userInfo', JSON.stringify(this.state));
             this.setState({ redirect: true });
         } else {

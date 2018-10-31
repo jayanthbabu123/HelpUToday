@@ -1,5 +1,4 @@
 import React from 'react'
-import SVG from 'react-inlinesvg';
 import KeyImage from '../Images/battery.svg';
 
 const Icon = (props) => (
