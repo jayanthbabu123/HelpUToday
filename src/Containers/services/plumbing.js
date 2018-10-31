@@ -1,30 +1,26 @@
 import React, { Component } from 'react';
-import Header from '../../Components/header';
 import { Link } from 'react-router-dom';
+import Header from '../../Components/header';
 
-class Electrical extends Component {
+class Plumbing extends Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [
-                { name: 'Wiring & Switching', link: '#electrical', image: require('../../Images/electrical/wiring.svg') },
-                { name: 'TV', link: '#tv', image: require('../../Images/electrical/television.svg') },
-                { name: 'Refrigerator', link: '#Refrigerator', image: require('../../Images/electrical/refrigerator.svg') },
-                { name: 'Fan&Cooler', link: '#fan', image: require('../../Images/electrical/cooler.svg') },
-                { name: 'Air Conditioning', link: '#Air', image: require('../../Images/electrical/air-conditioning.svg') },
-                { name: 'Mixer&Iron', link: '#Mixer', image: require('../../Images/electrical/blender.svg') },
-                { name: 'Micro Oven&Electrics', link: '#Micro', image: require('../../Images/electrical/microwave-oven.svg') },
-                { name: 'Others', link: '#Others', image: require('../../Images/electrical/music-player.svg') }
+                { name: 'Piping', link: '#Piping', image: require('../../Images/plumbing/piping.svg') },
+                { name: 'Bath Room Fitting', link: '#Bath', image: require('../../Images/plumbing/shower.svg') },
+                { name: 'Kitchen Fitting', link: '#Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
+                { name: 'Minor Repairs', link: '#Minor', image: require('../../Images/plumbing/toolbox.svg') },
+                { name: 'Taps', link: '#Taps', image: require('../../Images/plumbing/tap.svg') },
+                { name: 'Others', link: '#Others', image: require('../../Images/plumbing/repairing.svg') }
             ],
             popUp: [
-                { name: 'Wiring & Switching', service: 'Wiring & Switching Service', link: '#electrical', pop: 'electrical', image: require('../../Images/electrical/wiring.svg') },
-                { name: 'TV', service: 'TV Service', link: '#tv', pop: 'tv', image: require('../../Images/electrical/television.svg') },
-                { name: 'Refrigerator', service: 'Refrigerator Service', link: '#Refrigerator', pop: 'Refrigerator', image: require('../../Images/electrical/refrigerator.svg') },
-                { name: 'Fan&Cooler', service: 'Fan&Cooler Service', link: '#fan', pop: 'fan', image: require('../../Images/electrical/cooler.svg') },
-                { name: 'Air Conditioning', service: 'Air Conditioning Service', link: '#Air', pop: 'Air', image: require('../../Images/electrical/air-conditioning.svg') },
-                { name: 'Mixer&Iron', service: 'Mixer&Iron Service', link: '#Mixer', pop: 'Mixer', image: require('../../Images/electrical/blender.svg') },
-                { name: 'Micro Oven&Electrics', service: 'Micro Oven&Electrics Service', link: '#Micro', pop: 'Micro', image: require('../../Images/electrical/microwave-oven.svg') },
-                { name: 'Others', service: 'Others Services', link: '#Others', pop: 'Others', image: require('../../Images/electrical/music-player.svg') },
+                { name: 'Piping', service: 'Piping Service', link: '#Piping', pop: 'Piping', image: require('../../Images/plumbing/piping.svg') },
+                { name: 'Bath Room Fitting', service: 'Bath Room Fitting Service', link: '#Bath', pop: 'Bath', image: require('../../Images/plumbing/shower.svg') },
+                { name: 'Kitchen Fitting', service: 'Kitchen Fitting Service', link: '#Kitchen', pop: 'Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
+                { name: 'Minor Repairs', service: 'Minor Repairs Service', link: '#Minor', pop: 'Minor', image: require('../../Images/plumbing/toolbox.svg') },
+                { name: 'Taps', service: 'Taps Service', link: '#Taps', pop: 'Taps', image: require('../../Images/plumbing/tap.svg') },
+                { name: 'Others', service: 'Others Service', link: '#Others', pop: 'Others', image: require('../../Images/plumbing/repairing.svg') }
             ]
         };
     }
@@ -39,8 +35,8 @@ class Electrical extends Component {
                         <li className="breadcrumb-item active">Electrical</li>
                     </ul>
                     <div className="container">
-                        <h2 className="text-center">Electrical Services</h2>
-                        <h4 className="theme-blue text-center">All electrical services under one umbrella</h4>
+                        <h2 className="text-center">Plumbing Services</h2>
+                        <h4 className="theme-blue text-center">All plumbing services under one umbrella</h4>
                         <div className="row pt-5">
                             {this.state.list.map((item, index) => {
                                 return (
@@ -57,9 +53,9 @@ class Electrical extends Component {
                         </div>
                     </div>
                     {
-                        this.state.popUp.map((item, index) => {
+                        this.state.popUp.map((item, ind) => {
                             return (
-                                <div key={index}>
+                                <div key={ind}>
                                     <div className="modal fade" id={item.pop}>
                                         <div className="modal-dialog modal-lg">
                                             <div className="modal-content">
@@ -75,9 +71,9 @@ class Electrical extends Component {
                                                         </div>
                                                     </div>
                                                     <div className="container-fluid">
-                                                        <p className="text-justify"><b>Description:</b>Description: Agile software development refers to a group of software
+                                                        <p className="text-justify"><b>Description:</b>Agile software development refers to a group of software
                                                         development methodologies based on iterative development, where requirements and solutions
-                                                        evolve through collaboration between self-organizing cross-functional teams.</p>
+                                        evolve through collaboration between self-organizing cross-functional teams.</p>
                                                         <div className="row">
                                                             <div className="col-md-6">
                                                                 <label htmlFor="usr">First Name:</label>
@@ -114,8 +110,9 @@ class Electrical extends Component {
                         })
                     }
                 </div>
+
             </div>
         )
     }
 }
-export default Electrical;
+export default Plumbing;

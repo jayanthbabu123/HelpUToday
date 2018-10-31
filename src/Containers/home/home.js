@@ -13,38 +13,38 @@ class Home extends Component {
                 {
                     heading: 'Electrical',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/plug.svg')
+                    image: require('../../Images/home-services/plug.svg')
                 },
                 {
                     heading: 'Plumbing',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/pipes.svg')
+                    image: require('../../Images/home-services/pipes.svg')
                 },
                 {
                     heading: 'Home Cleaning',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/paint-roller.svg')
+                    image: require('../../Images/home-services/paint-roller.svg')
                 },
                 {
                     heading: 'Marriages',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/wedding-couple.svg')
+                    image: require('../../Images/home-services/wedding-couple.svg')
                 },
                 {
                     heading: 'Washing',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/two-shirts.svg')
+                    image: require('../../Images/home-services/two-shirts.svg')
                 },
                 {
                     heading: 'Computer Repair',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/imac.svg')
+                    image: require('../../Images/home-services/imac.svg')
                 }
             ],
             third_section: [
-                { heading: 'Book', content: ' Share your need and information with us.', image: require('../../Images/tick.svg') },
-                { heading: 'Scedule', content: ' Schedule a time for us to attend to you.', image: require('../../Images/calendar.svg') },
-                { heading: 'Relax', content: 'Our expert team will do the assigned task while you relax.', image: require('../../Images/resting.svg') }
+                { heading: 'Book', content: ' Share your need and information with us.', image: require('../../Images/home-services/tick.svg') },
+                { heading: 'Scedule', content: ' Schedule a time for us to attend to you.', image: require('../../Images/home-services/calendar.svg') },
+                { heading: 'Relax', content: 'Our expert team will do the assigned task while you relax.', image: require('../../Images/home-services/resting.svg') }
             ]
         }
     }
@@ -60,7 +60,7 @@ class Home extends Component {
                                     <h1 className="display-4"> <b>Work <span className="theme-color">Smarter</span>, Work <span className="text-info">Together</span></b></h1>
                                     <p>Help U brings you flexibility in choosing the services you want to avail</p>
                                     <ul className="btn-group">
-                                        <li><button type="button" className="btn btn-lg btn-success mx-2"><Link to="/dashboard">Book Service</Link></button></li>
+                                        <li><button type="button" className="btn btn-lg btn-success mx-2"><Link to="/services">Book Service</Link></button></li>
                                         <li><button type="button" className="btn btn-lg btn-info mx-2">About</button></li>
                                     </ul>
                                 </div>
@@ -94,7 +94,7 @@ class Home extends Component {
                                         <div className="row">
                                             <div className="col-md-12 my-3 text-center">
                                                 <div className="text-center">
-                                                    <img src={require('../../Images/energy.svg')} width="70" height="70" />
+                                                    <img src={require('../../Images/home-services/energy.svg')} width="70" height="70" />
                                                     <h4 className="theme-blue my-3">Energy</h4>
                                                     <p className="text-center">
                                                         See our energy products and services <br />available to you.
@@ -103,7 +103,7 @@ class Home extends Component {
                                             </div>
                                             <div className="col-md-12 my-3 text-center">
                                                 <div className="text-center">
-                                                    <img src={require('../../Images/paint-roller.svg')} width="70" height="70" />
+                                                    <img src={require('../../Images/home-services/paint-roller.svg')} width="70" height="70" />
                                                     <h4 className="theme-blue my-3">Home Services</h4>
                                                     <p className="text-center">
                                                         Protect your boiler, heating, appliances, <br />electricals, plumbing and drains.
@@ -113,13 +113,13 @@ class Home extends Component {
                                         </div>
                                     </div>
                                     <div className="col-md-4 worker-img">
-                                        <img src={require('../../Images/worker.png')} width="100%" height="auto" />
+                                        <img src={require('../../Images/home-services/worker.png')} width="100%" height="auto" />
                                     </div>
                                     <div className="col-md-4">
                                         <div className="row">
                                             <div className="col-md-12 my-3 text-center">
                                                 <div className="text-center">
-                                                    <img src={require('../../Images/rocket.svg')} width="70" height="70" />
+                                                    <img src={require('../../Images/home-services/rocket.svg')} width="70" height="70" />
                                                     <h4 className="theme-blue my-3">Smart Homes</h4>
                                                     <p className="text-center">
                                                         Enjoy the benefits of smart meters and find <br />out more about smart products.
@@ -128,7 +128,7 @@ class Home extends Component {
                                             </div>
                                             <div className="col-md-12 my-3 text-center">
                                                 <div className="text-center">
-                                                    <img src={require('../../Images/call.svg')} width="70" height="70" />
+                                                    <img src={require('../../Images/home-services/call.svg')} width="70" height="70" />
                                                     <h4 className="theme-blue my-3">Help & Support</h4>
                                                     <p className="text-center">
                                                         Choose a category to find the best <br />way to contact us.
@@ -175,7 +175,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/timer.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/timer.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">Saves You Time</h4>
@@ -186,7 +186,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/safe.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/safe.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">For your Safety</h4>
@@ -197,7 +197,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/trophy.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/trophy.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">Best Rated Professtionals</h4>
@@ -208,7 +208,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/medal.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/medal.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">We are Well Equipped</h4>
@@ -219,7 +219,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/shakehand.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/shakehand.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">Always In Touch</h4>
@@ -230,7 +230,7 @@ class Home extends Component {
                                     <div className="col-md-4 p-5">
                                         <div className="row">
                                             <div className="col-md-3 text-center">
-                                                <img src={require('../../Images/wallet.svg')} width="70" height="70" />
+                                                <img src={require('../../Images/home-services/wallet.svg')} width="70" height="70" />
                                             </div>
                                             <div className="col-md-9">
                                                 <h4 className="theme-color">Cash Free Facility</h4>

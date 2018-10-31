@@ -25,7 +25,7 @@ class Headerpage extends Component {
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Services</a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="dropdown-item" to="/electrical">Electrical <img src={require('../Images/plug.svg')} width="20" height="20" className="pull-right mt-1"/></Link>
+                                    <Link className="dropdown-item" to="/electrical">Electrical <img src={require('../Images/home-services/plug.svg')} width="20" height="20" className="pull-right mt-1"/></Link>
                                     <a className="dropdown-item" href="#">Plumbing</a>
                                     <a className="dropdown-item" href="#">Home Cleaning</a>
                                     <a className="dropdown-item" href="#">Marriages</a>
