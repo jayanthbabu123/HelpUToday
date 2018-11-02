@@ -11,7 +11,7 @@ class Home extends Component {
         this.state = {
             second_section: [
                 {
-                    heading: 'Electrical',
+                    heading: 'Electrical ',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
                     image: require('../../Images/home-services/plug.svg')
                 },
