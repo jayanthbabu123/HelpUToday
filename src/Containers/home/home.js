@@ -85,7 +85,7 @@ class Home extends Component {
                             })}
                         </div>
                     </div>
-                    <div className="container-fluid  section-three p-0">
+                    <div className="container-fluid section-three p-0">
                         <div className="col-md-12 p-0">
                             <div className="card card-body">
                                 <h2 className="text-center mb-5">How Can We Healp you with ?</h2>
