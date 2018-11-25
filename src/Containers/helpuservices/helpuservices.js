@@ -8,19 +8,16 @@ class Services extends Component {
         super(props);
         this.state = {
             cards:[]
-        }   
+        }
     }
     componentDidMount(){
-        const data = CommonServices.getCardsData();
-        data.then((res)=>{
-            this.setState(({cards:res}))
-           })
+        CommonServices.getCardsData().then((res)=>{this.setState(({cards:res}))})
     }
     render() {
         return (    
             <div className="services-section">
-                <Header />
-                <div className="container-fluid mt-2">
+                <Header/>
+            <div className="container-fluid mt-2">
                     <ul className="breadcrumb theme-bg-color justify-content-end">
                         <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
                         <li className="breadcrumb-item active">Services</li>
@@ -30,12 +27,12 @@ class Services extends Component {
                         this.state.cards.map((value,index)=>{
                             return(
                                 <div className="col-md-3" key={index}>
-                                <div className="card card-body shadow-sm mb-4 animated fadeIn">
+                                <Link to={value.redirect} className="text-decotartion-none"><div className="card card-body shadow-sm mb-4 animated fadeIn">
                                     <div className="text-center">
-                                        <span><img src={value.main_cat_icon} width="60" height="60" className="mt-4" /></span>
+                                    <span><img src={value.main_cat_icon} width="60" height="60" className="mt-4" /></span>
                                         <h5 className="text-success my-4"><b><span className="theme-color">{value.main_cat_name}</span></b></h5>
                                     </div>
-                                </div>
+                                </div></Link>
                             </div>
                             )
                         })

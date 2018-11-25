@@ -1,30 +1,26 @@
 import React, { Component } from 'react';
-import Header from '../../Components/header';
 import { Link } from 'react-router-dom';
+import Header from '../../Components/header';
 
-class Marriages extends Component {
+class Photography extends Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [
-                { name: 'Chef', link: '#Chef', image: require('../../Images/marriages/chef-cooking.svg') },
-                { name: 'Food Catering', link: '#Food', image: require('../../Images/marriages/delivering.svg') },
-                { name: 'Buffet', link: '#Buffet', image: require('../../Images/marriages/buffet.svg') },
-                { name: 'Chairs/Tables', link: '#Chairs', image: require('../../Images/marriages/table.svg') },
-                { name: 'Lighting', link: '#Lighting', image: require('../../Images/marriages/desk-lamp.svg') },
-                { name: 'Video/Camera', link: '#Video', image: require('../../Images/marriages/video-camera.svg') },
-                { name: 'Wedding Invitaions', link: '#Wedding', image: require('../../Images/marriages/wedding-invitation.svg') },
-                { name: 'others', link: '#Others', image: require('../../Images/music-player.svg') }
+                { name: 'Piping', link: '#Piping', image: require('../../Images/plumbing/piping.svg') },
+                { name: 'Bath Room Fitting', link: '#Bath', image: require('../../Images/plumbing/shower.svg') },
+                { name: 'Kitchen Fitting', link: '#Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
+                { name: 'Minor Repairs', link: '#Minor', image: require('../../Images/plumbing/toolbox.svg') },
+                { name: 'Taps', link: '#Taps', image: require('../../Images/plumbing/tap.svg') },
+                { name: 'Others', link: '#Others', image: require('../../Images/plumbing/repairing.svg') }
             ],
             popUp: [
-                { name: 'Chef', service: 'Chef Service', link: '#Chef', pop: 'Chef', image: require('../../Images/marriages/chef-cooking.svg') },
-                { name: 'Food Catering', service: 'Food Catering Service', link: '#Food', pop: 'Food', image: require('../../Images/marriages/delivering.svg') },
-                { name: 'Buffet', service: 'Buffet Service', link: '#Buffet', pop: 'Buffet', image: require('../../Images/marriages/buffet.svg') },
-                { name: 'Chairs/Tables', service: 'Chairs/Tables Service', link: '#Chairs', pop: 'Chairs', image: require('../../Images/marriages/table.svg') },
-                { name: 'Lighting Keeping', service: 'Lighting Service', link: '#Lighting', pop: 'Lighting', image: require('../../Images/marriages/desk-lamp.svg') },
-                { name: 'Video/Camera', service: 'Video/Camera Service', link: '#Video', pop: 'Video', image: require('../../Images/marriages/video-camera.svg') },
-                { name: 'Wedding Invitaions', service: 'Wedding Invitaions Service', link: '#Wedding', pop: 'Wedding', image: require('../../Images/marriages/wedding-invitation.svg') },
-                { name: 'others', service: 'others Service', link: '#Others', pop: 'Others', image: require('../../Images/music-player.svg') }
+                { name: 'Piping', service: 'Piping Service', link: '#Piping', pop: 'Piping', image: require('../../Images/plumbing/piping.svg') },
+                { name: 'Bath Room Fitting', service: 'Bath Room Fitting Service', link: '#Bath', pop: 'Bath', image: require('../../Images/plumbing/shower.svg') },
+                { name: 'Kitchen Fitting', service: 'Kitchen Fitting Service', link: '#Kitchen', pop: 'Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
+                { name: 'Minor Repairs', service: 'Minor Repairs Service', link: '#Minor', pop: 'Minor', image: require('../../Images/plumbing/toolbox.svg') },
+                { name: 'Taps', service: 'Taps Service', link: '#Taps', pop: 'Taps', image: require('../../Images/plumbing/tap.svg') },
+                { name: 'Others', service: 'Others Service', link: '#Others', pop: 'Others', image: require('../../Images/plumbing/repairing.svg') }
             ]
         };
     }
@@ -36,11 +32,11 @@ class Marriages extends Component {
                     <ul className="breadcrumb theme-bg-color justify-content-end">
                         <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
                         <li className="breadcrumb-item"><Link to="/services">Services</Link></li>
-                        <li className="breadcrumb-item active">Home Cleaning</li>
+                        <li className="breadcrumb-item active">Electrical</li>
                     </ul>
                     <div className="container">
-                        <h2 className="text-center">Marriage Services</h2>
-                        <h4 className="theme-blue text-center">All marriage services under one umbrella</h4>
+                        <h2 className="text-center">Photography Services</h2>
+                        <h4 className="theme-blue text-center">All plumbing services under one umbrella</h4>
                         <div className="row pt-5">
                             {this.state.list.map((item, index) => {
                                 return (
@@ -114,8 +110,9 @@ class Marriages extends Component {
                         })
                     }
                 </div>
+
             </div>
         )
     }
 }
-export default Marriages;
+export default Photography;

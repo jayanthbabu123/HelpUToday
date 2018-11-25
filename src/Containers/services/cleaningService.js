@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../../Components/header';
+import { Link } from 'react-router-dom'
 
-class Plumbing extends Component {
+class CleaningService extends Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [
-                { name: 'Piping', link: '#Piping', image: require('../../Images/plumbing/piping.svg') },
-                { name: 'Bath Room Fitting', link: '#Bath', image: require('../../Images/plumbing/shower.svg') },
-                { name: 'Kitchen Fitting', link: '#Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
-                { name: 'Minor Repairs', link: '#Minor', image: require('../../Images/plumbing/toolbox.svg') },
-                { name: 'Taps', link: '#Taps', image: require('../../Images/plumbing/tap.svg') },
-                { name: 'Others', link: '#Others', image: require('../../Images/plumbing/repairing.svg') }
+                { name: 'Wash/Iron', link: '#WashIron', image: require('../../Images/washing/iron.svg') },
+                { name: 'Dry Cleaning', link: '#DryCleaning', image: require('../../Images/washing/suit.svg') },
+                { name: 'Blankets', link: '#Blankets', image: require('../../Images/washing/blanket.svg') },
+                { name: 'Carpets', link: '#Carpets', image: require('../../Images/washing/carpet.svg') },
+                { name: 'Curtains', link: '#Curtains', image: require('../../Images/washing/windows.svg') },
+                { name: 'Furniture', link: '#Furniture', image: require('../../Images/washing/chair.svg') },
+                { name: 'Leather Items', link: '#Leather', image: require('../../Images/washing/leather-jacket.svg') },
+                { name: 'Others', link: '#Others', image: require('../../Images/washing/silk.svg') }
             ],
             popUp: [
-                { name: 'Piping', service: 'Piping Service', link: '#Piping', pop: 'Piping', image: require('../../Images/plumbing/piping.svg') },
-                { name: 'Bath Room Fitting', service: 'Bath Room Fitting Service', link: '#Bath', pop: 'Bath', image: require('../../Images/plumbing/shower.svg') },
-                { name: 'Kitchen Fitting', service: 'Kitchen Fitting Service', link: '#Kitchen', pop: 'Kitchen', image: require('../../Images/plumbing/cutlery.svg') },
-                { name: 'Minor Repairs', service: 'Minor Repairs Service', link: '#Minor', pop: 'Minor', image: require('../../Images/plumbing/toolbox.svg') },
-                { name: 'Taps', service: 'Taps Service', link: '#Taps', pop: 'Taps', image: require('../../Images/plumbing/tap.svg') },
-                { name: 'Others', service: 'Others Service', link: '#Others', pop: 'Others', image: require('../../Images/plumbing/repairing.svg') }
+                { name: 'Wash/Iron', service: 'Wash/Iron Service', link: '#WashIron', pop: 'WashIron', image: require('../../Images/washing/iron.svg') },
+                { name: 'Dry Cleaning', service: 'Dry Cleaning Service', link: '#DryCleaning', pop: 'DryCleaning', image: require('../../Images/washing/suit.svg') },
+                { name: 'Blankets', service: 'Blankets Service', link: '#Blankets', pop: 'Blankets', image: require('../../Images/washing/blanket.svg') },
+                { name: 'Carpets', service: 'Carpets Service', link: '#Carpets', pop: 'Carpets', image: require('../../Images/washing/carpet.svg') },
+                { name: 'Curtains', service: 'Curtains Service', link: '#Curtains', pop: 'Curtains', image: require('../../Images/washing/windows.svg') },
+                { name: 'Furniture', service: 'Furniture Service', link: '#Furniture', pop: 'Furniture', image: require('../../Images/washing/chair.svg') },
+                { name: 'Leather Items', service: 'Leather Items Service', link: '#Leather', pop: 'Leather', image: require('../../Images/washing/leather-jacket.svg') },
+                { name: 'Others', service: 'Other Service', link: '#Others', pop: 'Others', image: require('../../Images/washing/silk.svg') }
             ]
         };
     }
@@ -32,11 +36,11 @@ class Plumbing extends Component {
                     <ul className="breadcrumb theme-bg-color justify-content-end">
                         <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
                         <li className="breadcrumb-item"><Link to="/services">Services</Link></li>
-                        <li className="breadcrumb-item active">Electrical</li>
+                        <li className="breadcrumb-item active">Home Cleaning</li>
                     </ul>
                     <div className="container">
-                        <h2 className="text-center">Plumbing Services</h2>
-                        <h4 className="theme-blue text-center">All plumbing services under one umbrella</h4>
+                        <h2 className="text-center">Cleaning Services</h2>
+                        <h4 className="theme-blue text-center">All Cleaning Services under one umbrella</h4>
                         <div className="row pt-5">
                             {this.state.list.map((item, index) => {
                                 return (
@@ -110,9 +114,8 @@ class Plumbing extends Component {
                         })
                     }
                 </div>
-
             </div>
         )
     }
 }
-export default Plumbing;
+export default CleaningService;

@@ -4,6 +4,7 @@
             "main_cat_id":"1",
             "main_cat_name":"Home Maintenance",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/619/619034.svg",
+            "redirect":"/home-maintenance",
             "sub_cat_array_home":[
                 {
                     "sub_cat_id":"1",
@@ -96,6 +97,7 @@
             "main_cat_id":"2",
             "main_cat_name":"Cleaning Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/578/578106.svg",
+            "redirect":"/cleaning-service",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -108,6 +110,7 @@
             "main_cat_id":"3",
             "main_cat_name":"Document Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/235/235820.svg",
+            "redirect":"/Document-service",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -120,6 +123,7 @@
             "main_cat_id":"4",
             "main_cat_name":"Events & Occasions",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/595/595951.svg",
+            "redirect":"/events-occasions",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -132,6 +136,7 @@
             "main_cat_id":"5",
             "main_cat_name":"Automobile Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/190/190387.svg",
+            "redirect":"/autoMobile-Service",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -144,6 +149,7 @@
             "main_cat_id":"6",
             "main_cat_name":"Health & Personal",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/375/375279.svg",
+            "redirect":"/helth-services",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -156,6 +162,7 @@
             "main_cat_id":"7",
             "main_cat_name":"Electronics & Appliances",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/361/361356.svg",
+            "redirect":"/electronics-appliances",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",
@@ -168,6 +175,7 @@
             "main_cat_id":"8",
             "main_cat_name":"Photography Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/254/254050.svg",
+            "redirect":"/photography-services",
             "sub_cat_array":[
                 {
                     "sub_cat_id":"1",

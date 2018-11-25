@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../Components/header';
 import {Link} from 'react-router-dom'
 
-class ComputerRepair extends Component {
+class ElectronicsAppliances extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -118,4 +118,4 @@ class ComputerRepair extends Component {
         )
     }
 }
-export default ComputerRepair;
+export default ElectronicsAppliances;
