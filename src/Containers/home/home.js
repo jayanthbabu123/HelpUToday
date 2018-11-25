@@ -23,7 +23,7 @@ class Home extends Component {
                 {
                     heading: 'Home Cleaning',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/paint-roller.svg')
+                    image: require('../../Images/home-services/house.svg')
                 },
                 {
                     heading: 'Marriages',
@@ -103,7 +103,7 @@ class Home extends Component {
                                             </div>
                                             <div className="col-md-12 my-3 text-center">
                                                 <div className="text-center">
-                                                    <img src={require('../../Images/home-services/paint-roller.svg')} width="70" height="70" />
+                                                    <img src={require('../../Images/home-services/house.svg')} width="70" height="70" />
                                                     <h4 className="theme-blue my-3">Home Services</h4>
                                                     <p className="text-center">
                                                         Protect your boiler, heating, appliances, <br />electricals, plumbing and drains.

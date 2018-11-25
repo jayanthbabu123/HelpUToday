@@ -1,0 +1,180 @@
+{
+    "main_cat_array":[
+        {
+            "main_cat_id":"1",
+            "main_cat_name":"Home Maintenance",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/619/619034.svg",
+            "sub_cat_array_home":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"2",
+                    "sub_cat_name":"Carpenters",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"3",
+                    "sub_cat_name":"Plumbers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"4",
+                    "sub_cat_name":"Electricians",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"5",
+                    "sub_cat_name":"Painters",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"6",
+                    "sub_cat_name":"Rainwater Harvesting",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"7",
+                    "sub_cat_name":"Interior Designers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"8",
+                    "sub_cat_name":"Gardeners",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"9",
+                    "sub_cat_name":"Masonry Works",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"10",
+                    "sub_cat_name":"Welding & Fabrication",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"11",
+                    "sub_cat_name":"Architects",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"12",
+                    "sub_cat_name":"Solar Heater Services",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"13",
+                    "sub_cat_name":"Water Proofing",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"14",
+                    "sub_cat_name":"Civil Contractors",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"15",
+                    "sub_cat_name":"Packers and Movers Outstation",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"16",
+                    "sub_cat_name":"False Ceiling",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"17",
+                    "sub_cat_name":"Sofa Repair & Service",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"2",
+            "main_cat_name":"Cleaning Services",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/578/578106.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"3",
+            "main_cat_name":"Document Services",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/235/235820.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"4",
+            "main_cat_name":"Events & Occasions",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/595/595951.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"5",
+            "main_cat_name":"Automobile Services",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/190/190387.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"6",
+            "main_cat_name":"Health & Personal",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/375/375279.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"7",
+            "main_cat_name":"Electronics & Appliances",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/361/361356.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        },
+        {
+            "main_cat_id":"8",
+            "main_cat_name":"Photography Services",
+            "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/254/254050.svg",
+            "sub_cat_array":[
+                {
+                    "sub_cat_id":"1",
+                    "sub_cat_name":"Packers and Movers",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                }
+            ]
+        }
+    ]
+}
