@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../Components/header';
 import { Link } from 'react-router-dom';
+import CommonFooter from '../../Components/common-footer';
 
 class EventsOccasions extends Component {
     constructor(props) {
@@ -114,6 +115,7 @@ class EventsOccasions extends Component {
                         })
                     }
                 </div>
+                <CommonFooter/>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../../Components/header'
+import Header from '../../Components/header';
+import CommonFooter from '../../Components/common-footer';
 
 export default class DocumentService extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class DocumentService extends Component {
       <div>
         <Header/>
         <h1>DocumentService</h1>
+        <CommonFooter/>
       </div>
     )
   }

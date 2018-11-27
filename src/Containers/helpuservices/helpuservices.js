@@ -3,6 +3,7 @@ import Header from '../../Components/header';
 import { Link } from 'react-router-dom';
 import '../../App.scss';
 import CommonServices from '../../Components/common-services';
+import CommonFooter from '../../Components/common-footer';
 class Services extends Component {
     constructor(props) {
         super(props);
@@ -39,6 +40,7 @@ class Services extends Component {
                     }
                     </div>
                 </div>
+                <CommonFooter/>
             </div>
         )
     }

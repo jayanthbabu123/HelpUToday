@@ -65,9 +65,10 @@ bottom: 0;
 min-width: 100%; 
 min-height: 100%;
 } */
-.text-decotartion-none:hover{
+.text-decotartion-none:hover {
     text-decoration: none !important
 }
+
 .content {
     position: fixed;
     top: 0;
@@ -112,12 +113,17 @@ min-height: 100%;
 /* Header */
 .navigation-bar .navbar {
     background-color: white !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
-.nav-item .dropdown-menu.show:hover {
+.nav-item:hover .dropdown-menu {
     display: block !important;
+    transition: 0.3s ease-in-out;
 }
-
+.dropdown-menu .dropdown-item{
+    color: #428bca;
+    font-weight: 500;
+}
 /* Header ends */
 
 

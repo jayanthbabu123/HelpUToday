@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/header';
+import CommonHeader from '../../Components/common-footer';
 
 class Photography extends Component {
     constructor(props) {
@@ -110,7 +111,7 @@ class Photography extends Component {
                         })
                     }
                 </div>
-
+                <CommonHeader/>
             </div>
         )
     }

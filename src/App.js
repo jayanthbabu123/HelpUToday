@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom';
 import Home from './Containers/home/home';
+import About from './Components/about';
 import Login from './Containers/login/login';
 import Services from './Containers/helpuservices/helpuservices';
 import Homecleaning from './Containers/services/homeMaintenance';
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path='/' component={Login} />
           <Route path='/home' component={Home} />
           <Route path='/login' component={Login} />
+          <Route path='/about' component={About} />
           <Route path='/services' component={Services} />
           <Route path='/home-maintenance' component={Homecleaning}/>
           <Route path='/cleaning-service' component={CleaningService}/>

@@ -13,17 +13,17 @@ class Headerpage extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <Link className="nav-link" to="/home">Home</Link>
+                                <Link className="nav-link" to="/home"><b>Home</b></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                            <Link className="nav-link" to="/about"><b>About</b></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact Us</a>
+                                <a className="nav-link" href="#"><b>Contact Us</b></a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Services</a>
+                                    <b>Help U Services</b></a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <Link className="dropdown-item" to="/home-maintenance"><img src={require('../Images/home-services/main-services/house.svg')} width="20" height="20" className="mr-2"/>Home Maintenance </Link>
                                     <Link className="dropdown-item" to="/cleaning-service"><img src={require('../Images/home-services/main-services/cleaning-service.svg')} width="20" height="20" className="mr-2"/>Cleaning Services </Link>
@@ -37,7 +37,7 @@ class Headerpage extends Component {
                             </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
-                            <Link to="/"><button className="btn btn-outline-success my-2 my-sm-0" type="button">Sign In</button></Link>
+                            <Link to="/"><button className="btn btn-outline-info my-2 my-sm-0" type="button">Sign In</button></Link>
                         </form>
                     </div>
                 </nav>

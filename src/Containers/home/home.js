@@ -61,7 +61,7 @@ class Home extends Component {
                                     <p>Help U brings you flexibility in choosing the services you want to avail</p>
                                     <ul className="btn-group">
                                         <li><button type="button" className="btn btn-lg btn-success mx-2"><Link to="/services">Book Service</Link></button></li>
-                                        <li><button type="button" className="btn btn-lg btn-info mx-2">About</button></li>
+                                        <li><Link to="/about"><button type="button" className="btn btn-lg btn-info mx-2">About</button></Link></li>
                                     </ul>
                                 </div>
                             </div>
