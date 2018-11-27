@@ -94,11 +94,11 @@ class CleaningService extends Component {
                                                             </div>
                                                             <div className="col-md-6 my-3">
                                                                 <label htmlFor="usr">Select Date:</label>
-                                                                <input type="calendar" className="form-control" id="usr" name="username" placeholder="Select Date" />
+                                                                <input type="date" className="form-control" id="usr" name="username" placeholder="Select Date" />
                                                             </div>
                                                             <div className="col-md-12 my-3">
                                                                 <label htmlFor="usr">Enter Location:</label>
-                                                                <input type="calendar" className="form-control" id="usr" name="username" placeholder="Select Your Location" />
+                                                                <input type="search" className="form-control" id="usr" name="username" placeholder="Select Your Location" />
                                                             </div>
                                                         </div>
                                                     </div>
