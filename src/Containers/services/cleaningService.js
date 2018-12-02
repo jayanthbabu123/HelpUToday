@@ -39,7 +39,7 @@ class CleaningService extends Component {
                                     <div className="col-md-3" key={index}>
                                         <div className="card card-body shadow-sm mb-4 animated fadeIn">
                                             <div className="text-center">
-                                                <span><img src={item.sub_cat_icon} width="50" height="50" className="mt-4" /></span>
+                                                <span><img src={require(`../../Images/cleaning-services/${item.sub_cat_icon}`)} width="50" height="50" className="mt-4" /></span>
                                                 <h5 className="text-success my-4" data-toggle="modal" data-target={item.link}> <b>{item.sub_cat_name}</b></h5>
                                             </div>
                                         </div>

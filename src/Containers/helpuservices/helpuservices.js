@@ -30,7 +30,7 @@ class Services extends Component {
                                 <div className="col-md-3" key={index}>
                                 <Link to={value.redirect} className="text-decotartion-none"><div className="card card-body shadow-sm mb-4 animated fadeIn">
                                     <div className="text-center">
-                                    <span><img src={value.main_cat_icon} width="60" height="60" className="mt-4" /></span>
+                                    <span><img src={require(`../../Images/home-services/main-services/${value.main_cat_icon}`)} width="60" height="60" className="mt-4" /></span>
                                         <h5 className="text-success my-4"><b><span className="theme-color">{value.main_cat_name}</span></b></h5>
                                     </div>
                                 </div></Link>

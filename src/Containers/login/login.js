@@ -36,7 +36,6 @@ class Login extends Component {
         }
     }
     setActiveElement(value){
-      console.log(value);
       this.setState({activatedTab : value})
     }
     render() {

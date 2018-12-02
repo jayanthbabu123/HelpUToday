@@ -11,34 +11,34 @@ class Home extends Component {
         this.state = {
             second_section: [
                 {
-                    heading: 'Electrical ',
+                    heading: 'Home Maintenance ',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/plug.svg')
+                    image: require('../../Images/home-services/main-services/house.svg')
                 },
                 {
-                    heading: 'Plumbing',
+                    heading: 'Cleaning Services',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/pipes.svg')
+                    image: require('../../Images/home-services/main-services/cleaning-service.svg')
                 },
                 {
-                    heading: 'Home Cleaning',
+                    heading: 'Document Services',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/house.svg')
+                    image: require('../../Images/home-services/main-services/document-service.svg')
                 },
                 {
-                    heading: 'Marriages',
+                    heading: 'Events & Occasions',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/wedding-couple.svg')
+                    image: require('../../Images/home-services/main-services/events.svg')
                 },
                 {
-                    heading: 'Washing',
+                    heading: 'Automobile Services',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/two-shirts.svg')
+                    image: require('../../Images/home-services/main-services/automobile.svg')
                 },
                 {
-                    heading: 'Computer Repair',
+                    heading: 'Health & Personal',
                     content: ' Why put your hands in shock prone zones of the complex circuitwhen you can simply call an expert electrician and make your life easy. At LIFEASY we are one-stop- solution for all your needs and understand the urgency and therefore provide guaranteed 120 minutes of turnaround time. Lifeasy\'s professionals help you in any assistance in electrician service and ensure safety of your home and family.',
-                    image: require('../../Images/home-services/imac.svg')
+                    image: require('../../Images/home-services/main-services/doctor.svg')
                 }
             ],
             third_section: [
