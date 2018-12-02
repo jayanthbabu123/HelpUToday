@@ -37,14 +37,14 @@ class Footer extends Component {
                                 <div className="col-md-3 useful-link">
                                     <ul>
                                         <h2 className="title-widget">Useful Links</h2>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
-                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;About Us</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Home Maintenance</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Cleaning services</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Automobile Services</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Document Services</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Electronics & Appliances</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Health & Personal</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Events & Occasions</a></li>
+                                        <li> <a href="#"><i className="fa fa-angle-double-right"></i> &nbsp;Photography Services</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-md-3 useful-link">

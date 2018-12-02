@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Header from '../../Components/header';
-import Icon from '../../Components/svg-loader';
 class Login extends Component {
     constructor(props) {
         super(props);

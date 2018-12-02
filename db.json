@@ -77,11 +77,6 @@
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 },
                 {
-                    "sub_cat_id":"15",
-                    "sub_cat_name":"Packers and Movers Outstation",
-                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
-                },
-                {
                     "sub_cat_id":"16",
                     "sub_cat_name":"False Ceiling",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
@@ -177,11 +172,6 @@
                 {
                     "sub_cat_id":"16",
                     "sub_cat_name":"Sofa Cleaning",
-                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
-                },
-                {
-                    "sub_cat_id":"17",
-                    "sub_cat_name":"Commercial Carpet Cleaning",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 }
             ]
@@ -317,7 +307,7 @@
             "main_cat_name":"Automobile Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/190/190387.svg",
             "redirect":"/autoMobile-Service",
-            "sub_cat_array":[
+            "sub_cat_array_automobile":[
                 {
                     "sub_cat_id":"1",
                     "sub_cat_name":"Car Wash",
@@ -360,7 +350,7 @@
             "main_cat_name":"Health & Personal",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/375/375279.svg",
             "redirect":"/helth-services",
-            "sub_cat_array":[
+            "sub_cat_array_health":[
                 {
                     "sub_cat_id":"1",
                     "sub_cat_name":"Physiotherapy at Home",
@@ -373,7 +363,7 @@
                 },
                 {
                     "sub_cat_id":"3",
-                    "sub_cat_name":"Yoga & Meditation at Home",
+                    "sub_cat_name":"Yoga & Meditation",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 },
                 {
@@ -428,7 +418,7 @@
             "main_cat_name":"Electronics & Appliances",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/361/361356.svg",
             "redirect":"/electronics-appliances",
-            "sub_cat_array":[
+            "sub_cat_array_electronics":[
                 {
                     "sub_cat_id":"1",
                     "sub_cat_name":"Computer Service",
@@ -437,11 +427,6 @@
                 {
                     "sub_cat_id":"2",
                     "sub_cat_name":"Mobile Repair",
-                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
-                },
-                {
-                    "sub_cat_id":"3",
-                    "sub_cat_name":"CCTV Installation & Repair",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 },
                 {
@@ -509,19 +494,25 @@
                     "sub_cat_name":"Printer Repair",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 },
-                {
-                    "sub_cat_id":"17",
-                    "sub_cat_name":"DTH Repair & Re-Installation",
-                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
-                },
+
                 {
                     "sub_cat_id":"18",
                     "sub_cat_name":"TV Repair CRT TV Only",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 },
                 {
+                    "sub_cat_id":"17",
+                    "sub_cat_name":"DTH Repair & Re-Installation",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
                     "sub_cat_id":"19",
                     "sub_cat_name":"TV Wall Mounting / Installation",
+                    "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
+                },
+                {
+                    "sub_cat_id":"3",
+                    "sub_cat_name":"CCTV Installation & Repair",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 }
             ]
@@ -531,7 +522,7 @@
             "main_cat_name":"Photography Services",
             "main_cat_icon":"http://beta_www.flaticon.com/static/icons/svg/254/254050.svg",
             "redirect":"/photography-services",
-            "sub_cat_array":[
+            "sub_cat_array_photography":[
                 {
                     "sub_cat_id":"1",
                     "sub_cat_name":"Wedding Photography",
@@ -564,7 +555,7 @@
                 },
                 {
                     "sub_cat_id":"7",
-                    "sub_cat_name":"Portraits and Portfolio Shoots",
+                    "sub_cat_name":"Portraits & Portfolio",
                     "sub_cat_icon":"https://stark.bro4u.com/fit-in/images/cat_icons/mobile_v2/intracity_packers_movers_icon.png"
                 }
             ]
