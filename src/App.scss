@@ -428,3 +428,40 @@ body {
 }
 
 /* footer section ends */
+
+// register page 
+
+.custom-card{
+    //background-image: url(images/login-2.jpg);
+    height: 740px;
+    width: 100%
+  }
+  .custom-card .mt-10{
+    margin-top: 70px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 11px 5px lightgrey;
+  }
+  .custom-card .pl-7{
+    padding-left: 7rem !important
+  }
+  .custom-card .btn-grad:hover{
+    background: linear-gradient(45deg, #00dbde, #fc00ff);
+    color: white;
+  }
+  .custom-card .btn-grad{
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 13px;
+  }
+  
+  .Error{
+    box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent;
+    background-color: #fff6f6;
+    color: #9f3a38;
+  }
+  
+  .input-error{
+    box-shadow: 0 0 0 100px #fffaf0 inset!important;
+    border-color: #e0b4b4!important;
+    color: #95423f !important;
+  }

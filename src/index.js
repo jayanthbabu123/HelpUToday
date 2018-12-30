@@ -6,12 +6,12 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter } from 'react-router-dom'
-import App from './App';
+import RootApp from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <RootApp />
     </BrowserRouter>
     , document.getElementById('root'));
 

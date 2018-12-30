@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.scss'
+import '../App.scss';
+import firebase from '../firebase';
 class Headerpage extends Component {
+    handleLogout = () => {
+        firebase
+            .auth()
+            .signOut()
+    }
     render() {
         return (
             <div className="header-section navigation-bar">
@@ -37,7 +43,7 @@ class Headerpage extends Component {
                             </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
-                            <Link to="/"><button className="btn btn-outline-info my-2 my-sm-0" type="button">Sign In</button></Link>
+                            <Link to="/"><button className="btn btn-outline-info my-2 my-sm-0" type="button" onClick={this.handleLogout}>Logout</button></Link>
                         </form>
                     </div>
                 </nav>
