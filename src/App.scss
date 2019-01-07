@@ -447,6 +447,7 @@ body {
   .custom-card .btn-grad:hover{
     background: linear-gradient(45deg, #00dbde, #fc00ff);
     color: white;
+    transition: 0.3s ease-in-out;
   }
   .custom-card .btn-grad{
     box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);

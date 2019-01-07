@@ -6,18 +6,18 @@ import firebase from '../../firebase'
 
 export default class Login extends Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     errors: [],
     loading: false,
+    visible: true,
     usersRef: firebase.database().ref('users')
   }
 
   displayErrors = errors => errors.map((error, i) => <p key={i} className="text-center">{error.message}</p>);
 
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  }
+  handleOnchange = event => this.setState({ [event.target.name]: event.target.value });
+
 
   handleInputErrors = (errors, InputType) => {
     return errors.some(error =>
@@ -26,16 +26,43 @@ export default class Login extends Component {
       "input-error" : "";
   }
 
-  isFormValid = ({ email, password }) => email && password;
+  passwordType = () => {
+    this.setState({ visible: !this.state.visible })
+  }
+
+  isFormValid = ({ email, password }) => {
+    let errors = [];
+    let error
+    if (email.length > 0 && password.length > 0) {
+      return true
+    } else {
+      error = { message: "Please enter valid email and password" }
+      this.setState({ errors: errors.concat(error) })
+    }
+  }
 
   handleSubmit = event => {
     event.preventDefault();
     if (this.isFormValid(this.state)) {
       this.setState({ errors: [], loading: true })
+      let errors = [];
+      let error;
       firebase
         .auth()
         .signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then(signedInUser => {
+        .then(() => {
+          firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+              if (user && user.emailVerified) {
+                this.props.history.push('/home')
+              } else {
+                error = { message: "Please verify Account details" }
+                this.setState({ errors: errors.concat(error) })
+              }
+            } else {
+              this.props.history.push('/login')
+            }
+          })
         })
         .catch(err => {
           this.setState({ errors: this.state.errors.concat(err), loading: false })
@@ -50,9 +77,9 @@ export default class Login extends Component {
       .signInWithPopup(googleProvider)
       .then((createUser) => {
         this.saveUser(createUser).then(() => {
-          //console.log("user saved successfully")
+          console.log("user saved successfully")
         })
-      }).catch(err=>{
+      }).catch(err => {
         console.log(err)
       })
   }
@@ -63,7 +90,7 @@ export default class Login extends Component {
     })
   }
   render() {
-    const { email, password, errors } = this.state;
+    const { email, password, errors, visible } = this.state;
     return (
       <div>
         <Header />
@@ -76,7 +103,7 @@ export default class Login extends Component {
                   <div className="col-md-2"></div>
                   <div className="col-md-8">
                     <h1 className="text-center text-primary">SignIn</h1>
-                    <form className="pt-3" onClick={this.handleSubmit}>
+                    <form className="pt-3" onSubmit={this.handleSubmit}>
                       <div className="form-group">
                         <label htmlFor="email">Email address:</label>
                         <div className="input-group mb-3">
@@ -91,7 +118,7 @@ export default class Login extends Component {
                             name="email"
                             className={`form-control ${this.handleInputErrors(errors, "email")}`}
                             placeholder="Enter your Email"
-                            onChange={this.handleChange}
+                            onChange={this.handleOnchange}
                             value={email}
                           />
 
@@ -100,19 +127,18 @@ export default class Login extends Component {
                       <div className="form-group">
                         <label htmlFor="pwd">Password:</label>
                         <div className="input-group mb-3">
-                          <div className="input-group-prepend">
+                          <div className="input-group-prepend" onClick={this.passwordType}>
                             <span className={`input-group-text ${this.handleInputErrors(errors, "password")}`}>
-                              <i className="fa fa-eye-slash"></i>
+                              <i className={`${visible ? "fa fa-eye-slash" : "fa fa-eye"}`} aria-hidden="true"></i>
                             </span>
                           </div>
-
                           <input
-                            type="password"
+                             type={`${visible ? "password" : "text"}`}
                             name="password"
                             className={`form-control ${this.handleInputErrors(errors, "password")}`}
                             placeholder="Enter your password"
                             autoComplete="true"
-                            onChange={this.handleChange}
+                            onChange={this.handleOnchange}
                             value={password}
                           />
 
@@ -121,6 +147,7 @@ export default class Login extends Component {
                       <div className="form-group form-check">
                         <label className="form-check-label">
                           <input className="form-check-input" type="checkbox" /> Remember me</label>
+                        <Link to="/forgetpassword" className="float-right">forgetpassword?</Link>
                       </div>
                       <button type="submit" className="btn btn-primary btn-lg btn-block shadow-sm">Signin</button>
                       <p className="text-center py-2">Not have an account? <Link to="/register">Register</Link></p>

@@ -9,14 +9,14 @@ export default class Register extends Component {
     username: '',
     email: '',
     password: '',
-    conformPassword: '',
+    confirmPassword: '',
+    usersRef: firebase.database().ref("users"),
     errors: [],
     loading: false,
-    usersRef: firebase.database().ref('users')
+    visible: true,
   }
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value })
-  }
+  handleOnchange = event => this.setState({ [event.target.name]: event.target.value });
+
   isFormVaild = () => {
     let errors = [];
     let error;
@@ -35,14 +35,14 @@ export default class Register extends Component {
     }
   }
 
-  isFormEmpty = ({ username, email, password, conformPassword }) => {
-    return !username.length || !email.length || !password.length || !conformPassword.length
+  isFormEmpty = ({ username, email, password, confirmPassword }) => {
+    return !username.length || !email.length || !password.length || !confirmPassword.length
   }
-  passwordMatch = ({ password, conformPassword }) => {
-    if (password.length < 6 || conformPassword.length < 6) {
+  passwordMatch = ({ password, confirmPassword }) => {
+    if (password.length < 6 || confirmPassword.length < 6) {
       return false
     }
-    else if (password !== conformPassword) {
+    else if (password !== confirmPassword) {
       return false
     }
     else {
@@ -50,49 +50,55 @@ export default class Register extends Component {
     }
   }
 
-  displayErrors = errors => errors.map((error, i) => <p key={i} className="text-center">{error.message}</p>);
 
-  handleInputErrors = (errors, inputName) => {
-    return errors.some(error => error.message.toLowerCase().includes(inputName)) ? "input-error" : "";
-  }
-
-  handleSubmit = event => {
-    event.preventDefault();
+  handleregister = event => {
+    event.preventDefault()
     if (this.isFormVaild()) {
       this.setState({ errors: [], loading: true })
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
-        .then(createUser => {
-          console.log(createUser)
-          createUser.user.updateProfile({
+        .then(createdUser => {
+          console.log(createdUser);
+          createdUser.user.updateProfile({
             displayName: this.state.username,
-            photoURL: `http://gravatar.com/avatar/${md5(createUser.user.email)}?d=identicon`
+            photoURL: `http://gravatar.com/avatar/${md5(createdUser.user.email)}?d=identicon`
           })
             .then(() => {
-              this.saveUser(createUser).then(() => {
-                //console.log("user saved successfully")
-              })
-            })
-            .catch(err => {
-              this.setState({ errors: this.state.errors.concat(err), loading: false })
+              this.saveUserData(createdUser).then(() => console.log("user saved sucsessfully"))
             })
         })
-        .catch(err => {
+        .then(() => {
+          firebase.auth().currentUser.sendEmailVerification()
+            .then(alt => {
+              window.alert("verification link has sent to your mail please verify the account")
+              this.props.history.push('/login')
+            })
+        }).catch(err => {
           this.setState({ errors: this.state.errors.concat(err), loading: false })
         })
     }
+
   }
 
-  saveUser = createUser => {
-    return this.state.usersRef.child(createUser.user.uid).set({
-      name: createUser.user.displayName,
-      avatar: createUser.user.photoURL
+  saveUserData = (createdUser) => {
+    return this.state.usersRef.child(createdUser.user.uid).set({
+      name: createdUser.user.displayName,
+      avatar: createdUser.user.photoURL
     })
+  };
+
+  displayErrors = errors => errors.map((error, i) => <p key={i} className="text-center">{error.message}</p>);
+
+  handleInputErrors = (errors, inputName) => {
+    return errors.some(error => error.message.toLowerCase().includes(inputName)) ? "input-error" : "";
+  }
+  passwordType = () => {
+    this.setState({ visible: !this.state.visible })
   }
 
   render() {
-    const { username, email, password, conformPassword, errors } = this.state;
+    const { username, email, password, confirmPassword, errors, visible } = this.state;
     return (
       <div>
         <Header />
@@ -105,7 +111,7 @@ export default class Register extends Component {
                   <div className="col-md-2"></div>
                   <div className="col-md-8">
                     <h1 className="text-center text-primary">Signup</h1>
-                    <form className="pt-3" onSubmit={this.handleSubmit}>
+                    <form className="pt-3" onSubmit={this.handleregister}>
                       <div className="form-group">
                         <label htmlFor="email">User Name:</label>
                         <div className="input-group mb-3">
@@ -118,7 +124,7 @@ export default class Register extends Component {
                             name="username"
                             className="form-control"
                             placeholder="Username"
-                            onChange={this.handleChange}
+                            onChange={this.handleOnchange}
                             value={username}
                           />
 
@@ -138,7 +144,7 @@ export default class Register extends Component {
                             name="email"
                             className={`form-control ${this.handleInputErrors(errors, "email")}`}
                             placeholder="Enter your Email"
-                            onChange={this.handleChange}
+                            onChange={this.handleOnchange}
                             value={email}
                           />
 
@@ -147,19 +153,19 @@ export default class Register extends Component {
                       <div className="form-group">
                         <label htmlFor="pwd">Password:</label>
                         <div className="input-group mb-3">
-                          <div className="input-group-prepend">
+                          <div className="input-group-prepend" onClick={this.passwordType}>
                             <span className={`input-group-text ${this.handleInputErrors(errors, "password")}`}>
-                              <i className="fa fa-eye-slash"></i>
+                              <i className={`${visible ? "fa fa-eye-slash" : "fa fa-eye"}`} aria-hidden="true"></i>
                             </span>
                           </div>
 
                           <input
-                            type="password"
+                            type={`${visible ? "password" : "text"}`}
                             name="password"
                             className={`form-control ${this.handleInputErrors(errors, "password")}`}
                             placeholder="Enter your password"
                             autoComplete="true"
-                            onChange={this.handleChange}
+                            onChange={this.handleOnchange}
                             value={password}
                           />
 
@@ -168,20 +174,20 @@ export default class Register extends Component {
                       <div className="form-group">
                         <label htmlFor="pwd">Retype Password:</label>
                         <div className="input-group mb-3">
-                          <div className="input-group-prepend">
+                          <div className="input-group-prepend" onClick={this.passwordType}>
                             <span className={`input-group-text ${this.handleInputErrors(errors, "password")}`}>
-                              <i className="fa fa-eye-slash"></i>
+                              <i className={`${visible ? "fa fa-eye-slash" : "fa fa-eye"}`} aria-hidden="true"></i>
                             </span>
                           </div>
 
                           <input
-                            type="password"
-                            name="conformPassword"
+                            type={`${visible ? "password" : "text"}`}
+                            name="confirmPassword"
                             className={`form-control ${this.handleInputErrors(errors, "password")}`}
                             placeholder="Retype the password"
                             autoComplete="true"
-                            onChange={this.handleChange}
-                            value={conformPassword}
+                            onChange={this.handleOnchange}
+                            value={confirmPassword}
                           />
 
                         </div>
