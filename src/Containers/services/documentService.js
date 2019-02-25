@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../Components/header';
 import CommonFooter from '../../Components/common-footer';
-import CommonService from '../../Components/common-services';
+import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default class DocumentService extends Component {
@@ -11,14 +11,14 @@ export default class DocumentService extends Component {
         Data:[]
     };
 }
-componentDidMount(){
-    CommonService.getCardsData().then((result)=>{
-        result.map((value)=>{
-            if(value.main_cat_name === 'Document Services'){
-                this.setState(({Data:value.sub_cat_array_document}))
-            }
+componentDidMount() {
+    Axios.get('/main_cat_array/2/sub_cat_array_document.json')
+        .then(response => {
+            this.setState({ Data: response.data })
         })
-    })
+        .catch(err=>{
+            console.log(err)
+        })
 }
   render() {
     return (

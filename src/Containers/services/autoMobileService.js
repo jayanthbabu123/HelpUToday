@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import Header from '../../Components/header';
 import CommonFooter from '../../Components/common-footer';
-import CommonService from '../../Components/common-services';
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 export default class AutoMobileService extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        Data:[]
-    };
-}
-componentDidMount(){
-    CommonService.getCardsData().then((result)=>{
-        result.map((value)=>{
-            if(value.main_cat_name === 'Automobile Services'){
-                this.setState(({Data:value.sub_cat_array_automobile}))
-            }
-        })
-    })
-}
-  render() {
-    return (
-      <div>
-        <Header />
-          <div className="container-fluid services-section mt-2">
+    constructor(props) {
+        super(props)
+        this.state = {
+            Data: []
+        };
+    }
+    componentDidMount() {
+        Axios.get('/main_cat_array/4/sub_cat_array_automobile.json')
+            .then(response => {
+                this.setState({ Data: response.data })
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+    }
+    render() {
+        return (
+            <div>
+                <Header />
+                <div className="container-fluid services-section mt-2">
                     <ul className="breadcrumb theme-bg-color justify-content-end">
                         <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
                         <li className="breadcrumb-item"><Link to="/services">Services</Link></li>
@@ -47,11 +47,11 @@ componentDidMount(){
                                 )
                             })}
                         </div>
-                        <br/><br/><br/>
+                        <br /><br /><br />
                     </div>
                 </div>
-                <CommonFooter/>
+                <CommonFooter />
             </div>
-    )
-  }
+        )
+    }
 }

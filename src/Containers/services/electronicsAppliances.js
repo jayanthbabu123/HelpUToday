@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../Components/header';
 import {Link} from 'react-router-dom';
 import CommonFooter from '../../Components/common-footer';
-import CommonService from '../../Components/common-services';
+import Axios from 'axios';
 
 class ElectronicsAppliances extends Component {
     constructor(props) {
@@ -11,14 +11,14 @@ class ElectronicsAppliances extends Component {
             Data:[]
         };
     }
-    componentDidMount(){
-        CommonService.getCardsData().then((result)=>{
-            result.map((value)=>{
-                if(value.main_cat_name === 'Electronics & Appliances'){
-                    this.setState(({Data:value.sub_cat_array_electronics}))
-                }
+    componentDidMount() {
+        Axios.get('/main_cat_array/6/sub_cat_array_electronics.json')
+            .then(response => {
+                this.setState({ Data: response.data })
             })
-        })
+            .catch(err=>{
+                console.log(err)
+            })
     }
     render() {
         return (

@@ -10,7 +10,9 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
 import firebase from './firebase'
 import Loader from './Components/Loader';
+import axios from 'axios';
 
+axios.defaults.baseURL = 'https://helputoday-fae2e.firebaseio.com';
 
 class AppRoute extends React.Component {
     state = {

@@ -3,23 +3,24 @@ import Header from '../../Components/header';
 import { Link } from 'react-router-dom';
 import '../../App.scss';
 import CommonFooter from '../../Components/common-footer';
-import CommonService from '../../Components/common-services';
+import Axios from 'axios';
 
 class Homecleaning extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            Data:[]
+            Data:[],
+            show:false
         };
     }
-    componentDidMount(){
-        CommonService.getCardsData().then((result)=>{
-            result.map((value)=>{
-                if(value.main_cat_name === 'Home Maintenance'){
-                    this.setState(({Data:value.sub_cat_array_home}))
-                }
+    componentDidMount() {
+        Axios.get('/main_cat_array/0/sub_cat_array_home.json')
+            .then(response => {
+                this.setState({ Data: response.data })
             })
-        })
+            .catch(err=>{
+                console.log(err)
+            })
     }
     render() {
         return (
