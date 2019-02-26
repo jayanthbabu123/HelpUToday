@@ -37,6 +37,10 @@ class MyBookings extends Component {
                 <td>{data.date}</td>
             </tr>)
         }
+        let error = null
+        if (bookings.length === 0) {
+          error = <p className="text-center py-5">No services booked..!</p>
+        }
         return (
             <React.Fragment>
                 <Header />
@@ -59,6 +63,7 @@ class MyBookings extends Component {
                                 {myBookings}
                             </tbody>
                         </table>
+                        {error}
                     </div>
                 </div>
             </React.Fragment>

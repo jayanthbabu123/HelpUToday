@@ -30,8 +30,8 @@ class AppRoute extends React.Component {
     authenticateUser = () => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                this.props.setUser(user)
                 if (user && user.emailVerified) {
+                    this.props.setUser(user)
                     sessionStorage.setItem('userData', JSON.stringify(user));
                     this.setState({ loader: false })
                     this.props.history.push('/home')

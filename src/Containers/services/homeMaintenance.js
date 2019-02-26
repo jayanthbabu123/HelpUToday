@@ -45,23 +45,33 @@ class Homecleaning extends Component {
     handleBookService = event => {
         const { fullName, phoneNumber, date, address, comments, subTitle } = this.state
         event.preventDefault()
-        const bookingData = {
-            id: uuidv1(),
-            serviceType: subTitle,
-            name: fullName,
-            phone: phoneNumber,
-            date: date,
-            address: address,
-            comments: comments
+        if (this.isUserExist(this.props.user)) {
+            const bookingData = {
+                id: uuidv1(),
+                serviceType: subTitle,
+                name: fullName,
+                phone: phoneNumber,
+                date: date,
+                address: address,
+                comments: comments
+            }
+            Axios.post(`/bookings/${this.state.user.uid}/myBookings.json`, bookingData)
+                .then(resposne => {
+                    this.setState({ visible: false })
+                })
+                .catch(err => {
+                    console.log(err)
+                    this.setState({ visible: false })
+                })
         }
-        Axios.post(`/bookings/${this.state.user.uid}/myBookings.json`, bookingData)
-            .then(resposne => {
-                this.setState({ visible: false })
-            })
-            .catch(err => {
-                console.log(err)
-                this.setState({ visible: false })
-            })
+    }
+    isUserExist = user =>{
+        if(!user){
+           alert('please login to continue')
+           return false
+        }else{
+            return true
+        }
     }
 
     render() {
