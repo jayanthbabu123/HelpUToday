@@ -30,7 +30,7 @@ class Headerpage extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <Link className="nav-link" to="/"><b>Home</b></Link>
+                                <Link className="nav-link" to="/home"><b>Home</b></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about"><b>About</b></Link>

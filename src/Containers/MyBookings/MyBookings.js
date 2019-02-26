@@ -48,6 +48,7 @@ class MyBookings extends Component {
                 <p className="text-center">Your Bookings</p>
                 <div className="container">
                     <div className="card card-body p-0">
+                    <div className="table-responsive-lg">
                         <table className="table">
                             <thead className="thead-light">
                                 <tr>
@@ -64,6 +65,7 @@ class MyBookings extends Component {
                             </tbody>
                         </table>
                         {error}
+                    </div>
                     </div>
                 </div>
             </React.Fragment>

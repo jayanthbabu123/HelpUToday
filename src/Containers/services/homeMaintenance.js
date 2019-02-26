@@ -154,7 +154,6 @@ class Homecleaning extends Component {
                                     <button type="submit" className="btn btn-sm btn-success float-right" >SUBMIT</button>
                                 </div>
                             </form>
-
                         </div>
                     </Modal>
                 </section>
