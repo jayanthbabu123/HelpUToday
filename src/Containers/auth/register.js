@@ -102,7 +102,7 @@ export default class Register extends Component {
     return (
       <div>
         <Header />
-        <div className="custom-card">
+        <div className="container-fluid custom-card">
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-6">

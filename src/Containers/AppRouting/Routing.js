@@ -14,6 +14,7 @@ import ElectronicsAppliances from '../../Containers/services/electronicsApplianc
 import Photography from '../../Containers/services/photography';
 import Register from '../../Containers/auth/register'
 import Forgetpassword from '../auth/Forgetpassword';
+import MyBookings from '../MyBookings/MyBookings';
 
 export default class Routing extends Component {
     render() {
@@ -34,6 +35,7 @@ export default class Routing extends Component {
                 <Route path='/helth-services' component={Health} />
                 <Route path='/photography-services' component={Photography} />
                 <Route path='/forgetpassword' component={Forgetpassword} />
+                <Route path='/my-bookings' component={MyBookings} />
             </Switch>
         )
     }

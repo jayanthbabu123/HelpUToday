@@ -57,7 +57,7 @@ export default class Login extends Component {
                 this.props.history.push('/home')
               } else {
                 error = { message: "Please verify Account details" }
-                this.setState({ errors: errors.concat(error) })
+                this.setState({ errors: errors.concat(error),loading:false })
               }
             } else {
               this.props.history.push('/login')
@@ -94,7 +94,7 @@ export default class Login extends Component {
     return (
       <div>
         <Header />
-        <div className="custom-card">
+        <div className=" container-fluid custom-card">
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-6">
@@ -149,7 +149,7 @@ export default class Login extends Component {
                           <input className="form-check-input" type="checkbox" /> Remember me</label>
                         <Link to="/forgetpassword" className="float-right">forgetpassword?</Link>
                       </div>
-                      <button type="submit" className="btn btn-primary btn-lg btn-block shadow-sm">Signin</button>
+                      <button type="submit" disabled={this.state.loading} className="btn btn-primary btn-lg btn-block shadow-sm">Signin</button>
                       <p className="text-center py-2">Not have an account? <Link to="/register">Register</Link></p>
                     </form>
                     {errors.length > 0 && (

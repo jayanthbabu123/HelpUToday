@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.scss';
 import firebase from '../firebase';
+import { connect } from 'react-redux';
 class Headerpage extends Component {
-    handleLogout = () => {
+    state = {
+        Logout: false
+    }
+    handleLogout() {
         firebase
             .auth()
             .signOut()
             .then((user) => {
                 sessionStorage.removeItem('userData', JSON.stringify(user));
-              
+                window.location.reload(); 
             })
             .catch(err => {
                 console.log(err)
@@ -26,7 +30,7 @@ class Headerpage extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <Link className="nav-link" to="/home"><b>Home</b></Link>
+                                <Link className="nav-link" to="/"><b>Home</b></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about"><b>About</b></Link>
@@ -48,9 +52,15 @@ class Headerpage extends Component {
                                     <Link className="dropdown-item" to="/photography-services"><img src={require('../Images/home-services/main-services/photography.svg')} width="20" height="20" className="mr-2" />Photography Services </Link>
                                 </div>
                             </li>
+                            {this.props.user ? <li className="nav-item">
+                                <Link className="nav-link" to="/my-bookings"><b>My Bookings</b></Link>
+                            </li> : null}
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
-                            <Link to="/"><button className="btn btn-outline-info my-2 my-sm-0" type="button" onClick={this.handleLogout}>Logout</button></Link>
+                            {this.props.user ?
+                                <button className="btn btn-outline-info my-2 my-sm-0" type="button" onClick={this.handleLogout}>Logout</button>
+                                :
+                                <Link to="/login"><button className="btn btn-outline-success my-2 my-sm-0" type="button">Login</button></Link>}
                         </form>
                     </div>
                 </nav>
@@ -58,4 +68,7 @@ class Headerpage extends Component {
         );
     }
 }
-export default Headerpage;
+const mapStateToProps = state => ({
+    user: state.user.currentUser
+})
+export default connect(mapStateToProps)(Headerpage);
