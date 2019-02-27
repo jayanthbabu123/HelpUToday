@@ -15,6 +15,7 @@ import Photography from '../../Containers/services/photography';
 import Register from '../../Containers/auth/register'
 import Forgetpassword from '../auth/Forgetpassword';
 import MyBookings from '../MyBookings/MyBookings';
+import TodoApp from '../../Components/ContactUs';
 
 export default class Routing extends Component {
     render() {
@@ -36,6 +37,7 @@ export default class Routing extends Component {
                 <Route path='/photography-services' component={Photography} />
                 <Route path='/forgetpassword' component={Forgetpassword} />
                 <Route path='/my-bookings' component={MyBookings} />
+                <Route path='/contact-us' component={TodoApp} />
             </Switch>
         )
     }

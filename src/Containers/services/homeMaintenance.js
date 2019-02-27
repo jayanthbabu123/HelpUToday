@@ -21,7 +21,8 @@ class Homecleaning extends Component {
             phoneNumber: '',
             date: moment(new Date()).format('YYYY-MM-DD'),
             address: '',
-            comments: ''
+            comments: '',
+            errors: []
         };
     }
     componentDidMount() {
@@ -47,7 +48,7 @@ class Homecleaning extends Component {
     handleBookService = event => {
         const { fullName, phoneNumber, date, address, comments, subTitle } = this.state
         event.preventDefault()
-        if (this.state.user) {
+        if (this.state.user && this.isFormValid()) {
             const bookingData = {
                 id: uuidv1(),
                 serviceType: subTitle,
@@ -60,12 +61,29 @@ class Homecleaning extends Component {
             Axios.post(`/bookings/${this.state.user.uid}/myBookings.json`, bookingData)
                 .then(resposne => {
                     this.setState({ visible: false })
+                    this.props.history.push('/my-bookings')
                 })
                 .catch(err => {
                     console.log(err)
                     this.setState({ visible: false })
                 })
         }
+    }
+    isFormValid = () => {
+        let errors = [];
+        let error;
+        if (this.isAllFieldsExists(this.state)) {
+            error = { message: "Please fill all the details" }
+            this.setState({ errors: errors.concat(error) })
+            alert("Please fill all the details")
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    isAllFieldsExists = ({ fullName, phoneNumber, date, address, comments }) => {
+        return !fullName.length || !phoneNumber.length || !date.length || !address.length || !comments.length
     }
     isUserExist = (user) => {
         if (!user) {

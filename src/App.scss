@@ -466,3 +466,13 @@ body {
     border-color: #e0b4b4!important;
     color: #95423f !important;
   }
+  .pagination-link-styles{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+  }

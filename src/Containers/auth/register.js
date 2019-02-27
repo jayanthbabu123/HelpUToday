@@ -59,13 +59,15 @@ export default class Register extends Component {
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(createdUser => {
-          console.log(createdUser);
+          // console.log(createdUser);
           createdUser.user.updateProfile({
             displayName: this.state.username,
             photoURL: `http://gravatar.com/avatar/${md5(createdUser.user.email)}?d=identicon`
           })
             .then(() => {
-              this.saveUserData(createdUser).then(() => console.log("user saved sucsessfully"))
+              this.saveUserData(createdUser)
+              this.setState({loading:false})
+              .then(() => console.log("user saved sucsessfully"))
             })
         })
         .then(() => {
@@ -98,7 +100,7 @@ export default class Register extends Component {
   }
 
   render() {
-    const { username, email, password, confirmPassword, errors, visible } = this.state;
+    const { username, email, password, confirmPassword, errors, visible ,loading} = this.state;
     return (
       <div>
         <Header />
@@ -192,7 +194,7 @@ export default class Register extends Component {
 
                         </div>
                       </div>
-                      <button type="submit" className="btn btn-primary btn-lg btn-block shadow-sm">Register</button>
+                      <button type="submit" disabled={loading} className="btn btn-primary btn-lg btn-block shadow-sm">Register</button>
                       <p className="text-center pt-3">Already have an account? <Link to="/login">Login</Link></p>
                     </form>
                     {errors.length > 0 && (

@@ -36,7 +36,7 @@ class Headerpage extends Component {
                                 <Link className="nav-link" to="/about"><b>About</b></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><b>Contact Us</b></a>
+                            <Link className="nav-link" to="/contact-us"><b>Contact Us</b></Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,7 +60,7 @@ class Headerpage extends Component {
                             {this.props.user ?
                                 <button className="btn btn-outline-info my-2 my-sm-0" type="button" onClick={this.handleLogout}>Logout</button>
                                 :
-                                <Link to="/login"><button className="btn btn-outline-success my-2 my-sm-0" type="button">Login</button></Link>}
+                                <Link to="/register"><button className="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button></Link>}
                         </form>
                     </div>
                 </nav>
