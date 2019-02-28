@@ -33,14 +33,15 @@ class AppRoute extends React.Component {
                 if (user && user.emailVerified) {
                     this.props.setUser(user)
                     sessionStorage.setItem('userData', JSON.stringify(user));
+                    // sessionStorage.setItem('userUid', JSON.stringify(user.uid));
                     this.setState({ loader: false })
-                    this.props.history.push('/home')
+                    // this.props.history.push('/home')
                 } else {
                     this.setState({ errors: "Please verify Account details", loader: false })
                 }
             } else {
                 this.setState({ loader: false })
-                this.props.history.push('/login')
+                // this.props.history.push('/login')
             }
         })
     };

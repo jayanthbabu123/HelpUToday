@@ -15,10 +15,11 @@ import Photography from '../../Containers/services/photography';
 import Register from '../../Containers/auth/register'
 import Forgetpassword from '../auth/Forgetpassword';
 import MyBookings from '../MyBookings/MyBookings';
-import TodoApp from '../../Components/ContactUs';
+import Contact from '../../Components/ContactUs';
 
-export default class Routing extends Component {
+class Routing extends Component {
     render() {
+        const userUid = sessionStorage.getItem('userData')
         return (
             <Switch>
                 <Route exact path='/' component={Login} />
@@ -36,9 +37,12 @@ export default class Routing extends Component {
                 <Route path='/helth-services' component={Health} />
                 <Route path='/photography-services' component={Photography} />
                 <Route path='/forgetpassword' component={Forgetpassword} />
-                <Route path='/my-bookings' component={MyBookings} />
-                <Route path='/contact-us' component={TodoApp} />
+                {userUid ? <Route path='/my-bookings' component={MyBookings} /> : null}
+                <Route path='/contact-us' component={Contact} />
+                <Route component={Login} />
             </Switch>
         )
     }
-}
+};
+export default Routing;
+

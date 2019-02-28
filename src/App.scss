@@ -475,4 +475,22 @@ body {
     color: #007bff;
     background-color: #fff;
     border: 1px solid #dee2e6;
+    cursor: pointer;
   }
+  .icon-styles{
+    color: #1BBD36;
+    font-size: 25px;
+    margin-bottom: 8px;
+   }
+   .loading-styles{
+    position: absolute;
+    left: 90%;
+    top: 22%;
+   }
+   .label-align{
+    text-align: right;
+    padding: 0;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+   }
