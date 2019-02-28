@@ -77,7 +77,8 @@ export default class Login extends Component {
       .signInWithPopup(googleProvider)
       .then((createUser) => {
         this.saveUser(createUser).then(() => {
-          console.log("user saved successfully")
+          this.props.history.push('/home')
+          // console.log("user saved successfully")
         })
       }).catch(err => {
         console.log(err)
