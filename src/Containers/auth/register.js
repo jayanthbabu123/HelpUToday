@@ -67,7 +67,6 @@ export default class Register extends Component {
             .then(() => {
               this.saveUserData(createdUser)
               this.setState({loading:false})
-              .then(() => console.log("user saved sucsessfully"))
             })
         })
         .then(() => {
