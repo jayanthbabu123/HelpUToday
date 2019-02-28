@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 4000;
 
@@ -6,7 +7,8 @@ module.exports = {
     mode: 'production',
     entry: './src/index.js',
     output: {
-        filename: 'bundle.[hash].js'
+        path:path.join(__dirname,'/dist'),
+        filename: 'index_bundle .js'
     },
     devtool: 'inline-source-map',
     module: {
@@ -30,8 +32,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'public/index.html',
-            favicon: 'public/favicon.ico'
+            template: './public/index.html',
+            favicon: './public/favicon.ico'
         })
     ],
     devServer: {

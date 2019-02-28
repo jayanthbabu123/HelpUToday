@@ -28,8 +28,8 @@
     "children": false
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "json:server": "json-server --watch db.json"
+    "start": "webpack-dev-server --open",
+    "build":"webpack --mode production"
   },
   "eslintConfig": {
     "extends": "react-app"
